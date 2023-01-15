@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { GlobalStyles, ThemeProvider } from "@mui/material";
+import Contacts from "./component/Contacts/Contacts";
+import MainLayout from "layout/MainLayout";
+import { globalStyles, theme } from "./theme/theme";
+import Home from "./component/Home/Home";
+import About from "./component/About/About";
+import Map from "./component/Map/Map";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <MainLayout>
+        <Home />
+        <About />
+        <Contacts />
+        <Map />
+      </MainLayout>
+      <GlobalStyles styles={globalStyles as any} />
+    </ThemeProvider>
   );
 }
 
