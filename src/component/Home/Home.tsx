@@ -52,8 +52,10 @@ const ImagesSC = styled("img")`
 
 const CustomButtonSC = styled(ButtonSC)`
   background-color: transparent;
+  border: 3px solid #979f70;
   &:hover {
     background-color: transparent;
+    border: 3px solid #979f70;
   }
 `;
 

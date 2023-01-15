@@ -9,7 +9,9 @@ import LogoIcon from "../../../assets/icons/LogoIcon/LogoIcon";
 const HeaderContacts = () => {
   return (
     <ContainerSC>
-      <LogoIcon />
+      <a href="/">
+        <LogoIcon />
+      </a>
       <WrapperSC>
         <EmailSC href={`mailto:${authorMock.email}`}>
           {authorMock.email}
@@ -42,7 +44,7 @@ const ContainerSC = styled("section")`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 0px;
+  padding: 10px 0 0;
 `;
 
 const WrapperSC = styled(ContainerSC)`
@@ -54,6 +56,10 @@ const WrapperSC = styled(ContainerSC)`
   & > *:last-child {
     margin-right: 0;
   }
+`;
+
+const LogoLinkSC = styled("a")`
+  cursor: pointer;
 `;
 
 const PhoneSC = styled("a")`

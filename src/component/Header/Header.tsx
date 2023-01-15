@@ -18,7 +18,7 @@ const HeaderSC = styled("header")`
   top: 0;
   position: sticky;
   z-index: 1000;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #979f70;
   padding-bottom: 10px;
   background-color: #2c2c2c;
 `;

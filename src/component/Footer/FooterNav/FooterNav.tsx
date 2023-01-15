@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material";
-import { headerNav } from "lib/mock/headerNav";
+import { websiteNavArr } from "lib/mock/websiteNav";
 import { FooterSectionTitleSC } from "../Footer";
 
 const FooterNav = () => {
@@ -9,9 +9,9 @@ const FooterNav = () => {
       <FooterSectionTitleSC>Быстрый доступ:</FooterSectionTitleSC>
       <NavSC>
         <UlSC>
-          {headerNav.map((headerItemNav) => (
-            <LiSC key={headerItemNav.href}>
-              <ASC href={headerItemNav.href}>{headerItemNav.title}</ASC>
+          {websiteNavArr.map((websiteNavItem) => (
+            <LiSC key={websiteNavItem.title}>
+              <ASC href={websiteNavItem.href}>{websiteNavItem.title}</ASC>
             </LiSC>
           ))}
         </UlSC>

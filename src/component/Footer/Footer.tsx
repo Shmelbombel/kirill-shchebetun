@@ -19,7 +19,7 @@ const Footer = () => {
 };
 
 const FooterSC = styled("footer")`
-  border-top: 2px solid #ffffff;
+  border-top: 2px solid #979f70;
   background-color: #2c2c2c;
   padding: 20px 0 20px;
 `;

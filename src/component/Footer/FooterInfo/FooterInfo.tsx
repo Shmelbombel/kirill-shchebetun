@@ -31,7 +31,6 @@ const ParagraphSC = styled("p")`
 `;
 
 const AddressSC = styled("address")`
-  display: inline;
   color: gray;
   font-style: inherit;
 `;

@@ -1,14 +1,19 @@
-import React from "react";
-import { headerNav } from "lib/mock/headerNav";
+import React, { useEffect, useMemo, useState } from "react";
+import { websiteNavArr } from "lib/mock/websiteNav";
 import { styled } from "@mui/material";
+import { useHeaderNav } from "./useHeaderNav";
 
 const HeaderNav = () => {
+  const { onClick } = useHeaderNav();
+
   return (
     <NavSC>
       <UlSC>
-        {headerNav.map((headerNavItem) => (
-          <li key={headerNavItem.href}>
-            <ASC href={headerNavItem.href}>{headerNavItem.title}</ASC>
+        {websiteNavArr.map((websiteNavItem, index) => (
+          <li key={websiteNavItem.title}>
+            <ASC onClick={onClick(index + 1)} href={websiteNavItem.href}>
+              {websiteNavItem.title}
+            </ASC>
           </li>
         ))}
       </UlSC>
@@ -19,10 +24,9 @@ const HeaderNav = () => {
 const NavSC = styled("nav")``;
 const UlSC = styled("ul")`
   margin: 0 auto;
-  max-width: 200px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   & > * {
     margin-right: 20px;
   }
@@ -49,9 +53,9 @@ const ASC = styled("a")`
     transition: 0.2s all linear;
     content: "";
     position: absolute;
-    left: -10%;
-    bottom: -1.5px;
-    width: 120%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 2px;
     opacity: 0;
     background-color: #b9c285;
