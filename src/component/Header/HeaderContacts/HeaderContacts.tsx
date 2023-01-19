@@ -9,42 +9,71 @@ import LogoIcon from "../../../assets/icons/LogoIcon/LogoIcon";
 const HeaderContacts = () => {
   return (
     <ContainerSC>
-      <a href="/">
+      <LogoLinkASC href="/">
         <LogoIcon />
-      </a>
+      </LogoLinkASC>
       <WrapperSC>
-        <EmailSC href={`mailto:${authorMock.email}`}>
-          {authorMock.email}
-        </EmailSC>
-        <PhoneSC href={`tel:${authorMock.phone.normal}`}>
-          {authorMock.phone.format}
-        </PhoneSC>
-        {authorMock?.whatsapp && (
-          <LinkButtonUI
-            title={authorMock.whatsapp.title}
-            href={authorMock.whatsapp.href}
-            color={authorMock.whatsapp.color}
-            Icon={WhatsAppIcon}
-          />
-        )}
-        {authorMock?.telegram && (
-          <LinkButtonUI
-            title={authorMock.telegram.title}
-            href={authorMock.telegram.href}
-            color={authorMock.telegram.color}
-            Icon={TelegramIcon}
-          />
-        )}
+        <ContactContainerSC>
+          <EmailSC href={`mailto:${authorMock.email}`}>
+            {authorMock.email}
+          </EmailSC>
+          <PhoneSC href={`tel:${authorMock.phone.normal}`}>
+            {authorMock.phone.format}
+          </PhoneSC>
+        </ContactContainerSC>
+        <ContactContainerSC>
+          {authorMock?.whatsapp && (
+            <LinkButtonUI
+              title={authorMock.whatsapp.title}
+              href={authorMock.whatsapp.href}
+              color={authorMock.whatsapp.color}
+              Icon={WhatsAppIcon}
+            />
+          )}
+          {authorMock?.telegram && (
+            <LinkButtonUI
+              title={authorMock.telegram.title}
+              href={authorMock.telegram.href}
+              color={authorMock.telegram.color}
+              Icon={TelegramIcon}
+            />
+          )}
+        </ContactContainerSC>
       </WrapperSC>
     </ContainerSC>
   );
 };
+
+const LogoLinkASC = styled("a")`
+  margin-right: 30px;
+  @media (max-width: 900px) {
+  }
+`;
+
+const ContactContainerSC = styled("div")`
+  display: flex;
+  & > * {
+    margin-right: 20px;
+  }
+  & > *:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 595px) {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+`;
 
 const ContainerSC = styled("section")`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0 0;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const WrapperSC = styled(ContainerSC)`
@@ -55,6 +84,21 @@ const WrapperSC = styled(ContainerSC)`
   }
   & > *:last-child {
     margin-right: 0;
+  }
+  @media (max-width: 900px) {
+    padding-top: 0;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 595px) {
+    padding-top: 10px;
+    & > *:first-child {
+      margin-bottom: 10px;
+    }
   }
 `;
 

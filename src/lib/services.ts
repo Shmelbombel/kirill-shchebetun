@@ -1,3 +1,5 @@
+import { useMediaQuery } from "@mui/material";
+
 export const telephoneMask = (state: string) => {
   let inputNumbersValue = state.replace(/[\D]+/g, "");
 
@@ -28,3 +30,5 @@ export const telephoneMask = (state: string) => {
   }
   return formattedInputValue;
 };
+
+export const checkIsTablet = () => useMediaQuery("(max-width: 1024px)");

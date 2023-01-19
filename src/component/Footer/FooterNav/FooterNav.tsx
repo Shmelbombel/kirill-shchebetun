@@ -5,7 +5,7 @@ import { FooterSectionTitleSC } from "../Footer";
 
 const FooterNav = () => {
   return (
-    <div>
+    <ContainerSC>
       <FooterSectionTitleSC>Быстрый доступ:</FooterSectionTitleSC>
       <NavSC>
         <UlSC>
@@ -16,9 +16,17 @@ const FooterNav = () => {
           ))}
         </UlSC>
       </NavSC>
-    </div>
+    </ContainerSC>
   );
 };
+
+const ContainerSC = styled("div")`
+  @media (max-width: 500px) {
+    padding-top: 8px;
+    max-width: 160px;
+    text-align: right;
+  }
+`;
 
 const NavSC = styled("nav")``;
 const UlSC = styled("ul")`

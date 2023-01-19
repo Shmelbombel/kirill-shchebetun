@@ -17,6 +17,7 @@ export const globalStyles: Interpolation<Theme> = {
     fontFamily: "'Ubuntu', sans-serif",
     fontWeight: "400",
     minHeight: "100vh",
+    overflowX: "hidden",
   },
   "*": {
     margin: 0,
@@ -34,6 +35,9 @@ export const globalStyles: Interpolation<Theme> = {
     width: "100%",
     margin: "0 auto",
     padding: "0 15px",
+    "@media (max-width: 768px)": {
+      padding: "0 10px",
+    },
   },
   main: {
     flexGrow: 1,

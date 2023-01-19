@@ -34,7 +34,7 @@ const Map = () => {
         <iframe
           src="https://yandex.ru/map-widget/v1/-/CCUvnIsuPD"
           width="100%"
-          height="800"
+          height="100%"
           allowFullScreen={true}
           style={{
             position: "relative",
@@ -47,7 +47,15 @@ const Map = () => {
 const MapContainerSC = styled("div")`
   position: relative;
   overflow: hidden;
+  height: 800px;
   border-radius: 20px;
+  margin: 0 5px 0;
+  @media (max-width: 1024px) {
+    height: 600px;
+  }
+  @media (max-width: 500px) {
+    height: 400px;
+  }
 `;
 
 const CustomSectionSC = styled(SectionSC)``;

@@ -29,6 +29,9 @@ const ContactsForm = () => {
 const FormSC = styled("form")`
   width: 100%;
   max-width: 500px;
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const FomItemSC = styled("div")`

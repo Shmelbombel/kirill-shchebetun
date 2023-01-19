@@ -11,9 +11,11 @@ const FooterInfo = () => {
       </LogoContainerSC>
       <ParagraphSC>
         <AddressSC>
-          Город: {authorMock.address.city}
-          {"\n"}Улица: {authorMock.address.street}
-          {"\n"}Офис: {authorMock.address.officeNumber}
+          <span>Город:</span> {authorMock.address.city}
+          {"\n"}
+          <span>Улица:</span> {authorMock.address.street}
+          {"\n"}
+          <span>Офис:</span> {authorMock.address.officeNumber}
         </AddressSC>
       </ParagraphSC>
     </div>
@@ -22,17 +24,42 @@ const FooterInfo = () => {
 
 const LogoContainerSC = styled("div")`
   margin-bottom: 30px;
+  @media (max-width: 1100px) {
+    & > svg {
+      width: 200px;
+      height: 50px;
+    }
+    margin-bottom: 10px;
+  }
+  @media (max-width: 500px) {
+    & > svg {
+      width: 150px;
+      height: 50px;
+    }
+  }
 `;
 
 const ParagraphSC = styled("p")`
   font-size: 22px;
   max-width: 300px;
   white-space: pre-wrap;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+  @media (max-width: 850px) {
+    font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const AddressSC = styled("address")`
-  color: gray;
+  color: #ffffff;
   font-style: inherit;
+  & > span {
+    color: #979f70;
+  }
 `;
 
 export default React.memo(FooterInfo);

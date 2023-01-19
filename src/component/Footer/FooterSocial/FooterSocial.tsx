@@ -59,12 +59,50 @@ const LinkContainerSC = styled("div")`
   & > *:last-child {
     margin-bottom: 0;
   }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 850px) {
+    flex-direction: row;
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const LinkContainerItemSC = styled("div")`
   display: flex;
   & > * {
+    width: 125px;
     margin-right: 10px;
+  }
+  & > *:nth-of-type(even) {
+    margin-right: 0;
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    & > * {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 850px) {
+    flex-direction: row;
+    & > * {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    justify-content: space-between;
+    & > * {
+      margin-bottom: 15px;
+    }
   }
 `;
 

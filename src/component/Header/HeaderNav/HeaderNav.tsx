@@ -1,19 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { websiteNavArr } from "lib/mock/websiteNav";
 import { styled } from "@mui/material";
-import { useHeaderNav } from "./useHeaderNav";
 
 const HeaderNav = () => {
-  const { onClick } = useHeaderNav();
-
   return (
     <NavSC>
       <UlSC>
-        {websiteNavArr.map((websiteNavItem, index) => (
+        {websiteNavArr.map((websiteNavItem) => (
           <li key={websiteNavItem.title}>
-            <ASC onClick={onClick(index + 1)} href={websiteNavItem.href}>
-              {websiteNavItem.title}
-            </ASC>
+            <ASC href={websiteNavItem.href}>{websiteNavItem.title}</ASC>
           </li>
         ))}
       </UlSC>
@@ -59,6 +54,10 @@ const ASC = styled("a")`
     height: 2px;
     opacity: 0;
     background-color: #b9c285;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 18px;
   }
 `;
 

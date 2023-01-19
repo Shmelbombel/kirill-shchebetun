@@ -9,7 +9,7 @@ export const websiteNavObj: {
 } = {
   [WEBSITE_NAV.ABOUT]: { title: "Обо мне", href: "#about" },
   [WEBSITE_NAV.CONTACTS]: { title: "Обратаня связь", href: "#contacts" },
-  [WEBSITE_NAV.LOCATION]: { title: "Адрес", href: "#contacts" },
+  [WEBSITE_NAV.LOCATION]: { title: "Адрес", href: "#address" },
 };
 
 export const websiteNavArr = [
