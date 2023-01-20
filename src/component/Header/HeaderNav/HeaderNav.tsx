@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import { websiteNavArr } from "lib/mock/websiteNav";
 import { styled } from "@mui/material";
 
@@ -16,7 +16,11 @@ const HeaderNav = () => {
   );
 };
 
-const NavSC = styled("nav")``;
+const NavSC = styled("nav")`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
 const UlSC = styled("ul")`
   margin: 0 auto;
   width: 100%;

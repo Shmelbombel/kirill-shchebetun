@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionSC } from "UI/StyledComponents/SectionSC";
-import { Container, styled, useMediaQuery } from "@mui/material";
+import { styled } from "@mui/material";
 import { ButtonSC } from "UI/StyledComponents/ButtonSC";
 import { ContainerSC } from "UI/StyledComponents/ContainerSC";
 
@@ -70,10 +70,16 @@ const CustomSectionSC = styled(SectionSC)`
     height: calc(100vh - 147px);
   }
   @media (max-width: 900px) {
-    height: calc(100vh - 147px);
+    height: calc(100vh - 75px);
+  }
+  @media (max-width: 802px) {
+    height: calc(100vh - 85px);
   }
   @media (max-width: 595px) {
-    height: calc(100vh - 175px);
+    height: calc(100vh - 75px);
+  }
+  @media (max-width: 531px) {
+    height: calc(100vh - 128px);
   }
 `;
 

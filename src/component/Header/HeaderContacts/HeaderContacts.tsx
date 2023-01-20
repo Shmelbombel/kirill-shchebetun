@@ -23,20 +23,24 @@ const HeaderContacts = () => {
         </ContactContainerSC>
         <ContactContainerSC>
           {authorMock?.whatsapp && (
-            <LinkButtonUI
-              title={authorMock.whatsapp.title}
-              href={authorMock.whatsapp.href}
-              color={authorMock.whatsapp.color}
-              Icon={WhatsAppIcon}
-            />
+            <SocilaLinkSC>
+              <LinkButtonUI
+                title={authorMock.whatsapp.title}
+                href={authorMock.whatsapp.href}
+                color={authorMock.whatsapp.color}
+                Icon={WhatsAppIcon}
+              />
+            </SocilaLinkSC>
           )}
           {authorMock?.telegram && (
-            <LinkButtonUI
-              title={authorMock.telegram.title}
-              href={authorMock.telegram.href}
-              color={authorMock.telegram.color}
-              Icon={TelegramIcon}
-            />
+            <SocilaLinkSC>
+              <LinkButtonUI
+                title={authorMock.telegram.title}
+                href={authorMock.telegram.href}
+                color={authorMock.telegram.color}
+                Icon={TelegramIcon}
+              />
+            </SocilaLinkSC>
           )}
         </ContactContainerSC>
       </WrapperSC>
@@ -53,9 +57,11 @@ const LogoLinkASC = styled("a")`
       margin-bottom: 10px;
     }
   }
-  @media (max-width: 600px) {
-    & > svg {
-      width: 150px;
+`;
+
+const SocilaLinkSC = styled("div")`
+  @media (max-width: 595px) {
+    & > * {
       height: 30px;
     }
   }
@@ -72,7 +78,7 @@ const ContactContainerSC = styled("div")`
   @media (max-width: 595px) {
     width: 100%;
     justify-content: space-between;
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 `;
 
@@ -81,9 +87,11 @@ const ContainerSC = styled("section")`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0 0;
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: flex-start;
+  @media (max-width: 595px) {
+    flex-direction: row;
+  }
+  @media (max-width: 530px) {
+    flex-wrap: wrap;
   }
 `;
 
@@ -100,16 +108,18 @@ const WrapperSC = styled(ContainerSC)`
     padding-top: 0;
     flex-direction: row;
     width: 100%;
+    justify-content: flex-end;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     flex-wrap: wrap;
+    & > * {
+      margin-right: 0;
+    }
+    & > *:nth-of-type(2) {
+      margin-top: 5px;
+    }
   }
 
-  @media (max-width: 595px) {
-    padding-top: 10px;
-    & > *:first-child {
-      margin-bottom: 10px;
-    }
   }
 `;
 
@@ -119,6 +129,12 @@ const LogoLinkSC = styled("a")`
 
 const PhoneSC = styled("a")`
   position: relative;
+  @media (max-width: 900px) {
+    margin-right: 10px !important;
+  }
+  @media (max-width: 818px) {
+    margin-right: 0px !important;
+  }
 `;
 
 const EmailSC = styled("a")`
