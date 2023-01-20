@@ -3,11 +3,10 @@ import { styled } from "@mui/material";
 
 interface ISectionTitleUIProps {
   children: ReactNode;
-  href: string;
 }
 
-const SectionTitleUI = ({ href, children }: ISectionTitleUIProps) => {
-  return <TitleSC id={href.slice(1)}>{children}</TitleSC>;
+const SectionTitleUI = ({ children }: ISectionTitleUIProps) => {
+  return <TitleSC>{children}</TitleSC>;
 };
 
 export const TitleSC = styled("h1")`

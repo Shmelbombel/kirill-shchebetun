@@ -9,9 +9,7 @@ const Map = () => {
   return (
     <ContainerSC>
       <CustomSectionSC>
-        <SectionTitleUI href={websiteNavObj.Location.href}>
-          Местонахождение офиса
-        </SectionTitleUI>
+        <SectionTitleUI>Местонахождение офиса</SectionTitleUI>
         <MapContainerSC>
           <a
             href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"

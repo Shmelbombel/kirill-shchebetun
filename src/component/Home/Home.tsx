@@ -3,6 +3,8 @@ import { SectionSC } from "UI/StyledComponents/SectionSC";
 import { styled } from "@mui/material";
 import { ButtonSC } from "UI/StyledComponents/ButtonSC";
 import { ContainerSC } from "UI/StyledComponents/ContainerSC";
+import AnchorUI from "UI/AnchorUI/AnchorUI";
+import { websiteNavArr, websiteNavObj } from "lib/mock/websiteNav";
 
 const Home = () => {
   return (
@@ -19,6 +21,7 @@ const Home = () => {
         <ImageContainerSC>
           <ImagesSC src="/images/author_photo.jpg" alt="author_photo" />
         </ImageContainerSC>
+        <AnchorUI href={websiteNavArr[0].href} />
       </CustomSectionSC>
     </CustomContainerSC>
   );
@@ -57,7 +60,6 @@ const InfoContainerSC = styled("div")`
 `;
 
 const CustomSectionSC = styled(SectionSC)`
-  position: relative;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;

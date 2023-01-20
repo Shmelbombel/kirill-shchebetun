@@ -1,21 +1,21 @@
 import React from "react";
 import { SectionSC } from "UI/StyledComponents/SectionSC";
 import SectionTitleUI from "UI/SectionTitleUI/SectionTitleUI";
-import { websiteNavObj } from "lib/mock/websiteNav";
+import { websiteNavArr, websiteNavObj } from "lib/mock/websiteNav";
 import { styled } from "@mui/material";
 import ContactsForm from "./ContactsForm/ContactsForm";
 import { ContainerSC } from "UI/StyledComponents/ContainerSC";
+import AnchorUI from "UI/AnchorUI/AnchorUI";
 
 const Contacts = () => {
   return (
     <ContainerSC>
       <SectionSC>
-        <SectionTitleUI href={websiteNavObj.Contacts.href}>
-          {websiteNavObj.Contacts.title}
-        </SectionTitleUI>
+        <SectionTitleUI>{websiteNavObj.Contacts.title}</SectionTitleUI>
         <WrapperSC>
           <ContactsForm />
         </WrapperSC>
+        <AnchorUI href={websiteNavArr[2].href} />
       </SectionSC>
     </ContainerSC>
   );
