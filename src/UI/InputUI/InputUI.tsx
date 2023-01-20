@@ -7,6 +7,8 @@ export const InputUI = styled(TextField)`
     width: inherit;
     border-radius: 20px;
     & > .MuiInputBase-input {
+      font-family: inherit;
+      font-size: 18px;
       border: 3px solid #979f70;
       border-radius: inherit;
     }
