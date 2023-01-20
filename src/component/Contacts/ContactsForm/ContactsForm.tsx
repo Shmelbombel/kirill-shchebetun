@@ -37,7 +37,7 @@ const ContactsForm = () => {
   const messageController = useController({ control, name: "message" });
 
   const onSubmit = (data: IFormState) => {
-    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = "hidden";
     setModal("loading");
     emailjs
       .send(
@@ -57,7 +57,7 @@ const ContactsForm = () => {
   };
 
   const handleCloseModal = () => {
-    document.body.style.overflowX = "scroll";
+    document.body.style.overflowY = "scroll";
     setModal("");
   };
   const handleChange =
