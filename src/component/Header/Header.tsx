@@ -2,14 +2,15 @@ import React from "react";
 import HeaderContacts from "./HeaderContacts/HeaderContacts";
 import HeaderNav from "./HeaderNav/HeaderNav";
 import { styled } from "@mui/material";
+import { ContainerSC } from "UI/StyledComponents/ContainerSC";
 
 const Header = () => {
   return (
     <HeaderSC>
-      <WrapperSC className="container">
+      <ContainerSC className="container">
         <HeaderContacts />
         <HeaderNav />
-      </WrapperSC>
+      </ContainerSC>
     </HeaderSC>
   );
 };

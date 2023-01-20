@@ -11,8 +11,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
-        {/*<Home />*/}
-        {/*<About />*/}
+        <Home />
+        <About />
         <Contacts />
         <Map />
       </MainLayout>

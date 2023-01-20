@@ -4,16 +4,17 @@ import FooterSocial from "./FooterSocial/FooterSocial";
 import FooterInfo from "./FooterInfo/FooterInfo";
 import FooterNav from "./FooterNav/FooterNav";
 import FooterAbout from "./FooterAbout/FooterAbout";
+import { ContainerSC } from "UI/StyledComponents/ContainerSC";
 
 const Footer = () => {
   return (
     <FooterSC>
-      <WrapperSC className="container">
+      <CustomContainerSC>
         <FooterInfo />
         <FooterAbout />
         <FooterNav />
         <FooterSocial />
-      </WrapperSC>
+      </CustomContainerSC>
     </FooterSC>
   );
 };
@@ -24,7 +25,7 @@ const FooterSC = styled("footer")`
   padding: 20px 0 20px;
 `;
 
-const WrapperSC = styled("div")`
+const CustomContainerSC = styled(ContainerSC)`
   display: flex;
   justify-content: space-between;
   @media (max-width: 850px) {

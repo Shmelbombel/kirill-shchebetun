@@ -9,20 +9,23 @@ import SchoolIcon from "@mui/icons-material/School";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import { styled } from "@mui/material";
+import { ContainerSC } from "UI/StyledComponents/ContainerSC";
 
 const About = () => {
   return (
-    <SectionSC>
-      <SectionTitleUI href={websiteNavObj.About.href}>
-        {websiteNavObj.About.title}
-      </SectionTitleUI>
-      <WrapperSC>
-        <AboutItem title={authorMock.about.one} Icon={GavelIcon} />
-        <AboutItem title={authorMock.about.two} Icon={WorkOutlineIcon} />
-        <AboutItem title={authorMock.about.three} Icon={SchoolIcon} />
-        <AboutItem title={authorMock.about.four} Icon={HandshakeIcon} />
-      </WrapperSC>
-    </SectionSC>
+    <ContainerSC>
+      <SectionSC>
+        <SectionTitleUI href={websiteNavObj.About.href}>
+          {websiteNavObj.About.title}
+        </SectionTitleUI>
+        <WrapperSC>
+          <AboutItem title={authorMock.about.one} Icon={GavelIcon} />
+          <AboutItem title={authorMock.about.two} Icon={WorkOutlineIcon} />
+          <AboutItem title={authorMock.about.three} Icon={SchoolIcon} />
+          <AboutItem title={authorMock.about.four} Icon={HandshakeIcon} />
+        </WrapperSC>
+      </SectionSC>
+    </ContainerSC>
   );
 };
 
@@ -37,6 +40,16 @@ const WrapperSC = styled("div")`
     margin-bottom: 30px;
   }
   margin-bottom: 30px;
+  @media (max-width: 900px) {
+    width: 100%;
+    & > * {
+      margin-right: 0 !important;
+      margin-bottom: 30px;
+    }
+    & > *:last-child {
+      margin-bottom: 0px;
+    }
+  }
 `;
 
 export default React.memo(About);

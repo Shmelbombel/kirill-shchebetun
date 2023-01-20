@@ -30,15 +30,6 @@ export const globalStyles: Interpolation<Theme> = {
     display: "flex",
     flexDirection: "column",
   },
-  ".container": {
-    maxWidth: "1950px",
-    width: "100%",
-    margin: "0 auto",
-    padding: "0 15px",
-    "@media (max-width: 768px)": {
-      padding: "0 10px",
-    },
-  },
   main: {
     flexGrow: 1,
   },

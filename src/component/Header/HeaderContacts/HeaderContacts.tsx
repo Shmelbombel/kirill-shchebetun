@@ -47,6 +47,17 @@ const HeaderContacts = () => {
 const LogoLinkASC = styled("a")`
   margin-right: 30px;
   @media (max-width: 900px) {
+    & > svg {
+      width: 200px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    & > svg {
+      width: 150px;
+      height: 30px;
+    }
   }
 `;
 
