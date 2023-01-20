@@ -108,7 +108,10 @@ const ContactsForm = () => {
       <CustomButtonSC type="submit" fullWidth variant="outlined">
         Получить услугу
       </CustomButtonSC>
-      <Dialog open={modal === "success"} onClose={handleCloseModal}>
+      <Dialog
+        disableScrollLock={true}
+        open={modal === "success"}
+        onClose={handleCloseModal}>
         <ModalContainerSC>
           <SuccessIcon />
           <ModalTitleSC>
@@ -117,7 +120,10 @@ const ContactsForm = () => {
           </ModalTitleSC>
         </ModalContainerSC>
       </Dialog>
-      <Dialog open={modal === "error"} onClose={handleCloseModal}>
+      <Dialog
+        disableScrollLock={true}
+        open={modal === "error"}
+        onClose={handleCloseModal}>
         <ModalContainerSC>
           <ErrorIconSC />
           <ModalTitleSC>
@@ -132,7 +138,7 @@ const ContactsForm = () => {
           </ModalTitleSC>
         </ModalContainerSC>
       </Dialog>
-      <Dialog open={modal === "loading"}>
+      <Dialog disableScrollLock={true} open={modal === "loading"}>
         <ModalContainerSC style={{ padding: "50px" }}>
           <CircularProgress size={60} />
         </ModalContainerSC>
