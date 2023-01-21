@@ -15,7 +15,16 @@ const ContainerSC = styled("div")`
   bottom: 0;
   height: 104px;
   @media (max-width: 900px) {
-    display: none;
+    height: 75px;
+  }
+  @media (max-width: 802px) {
+    height: 85px;
+  }
+  @media (max-width: 595px) {
+    height: 75px;
+  }
+  @media (max-width: 530px) {
+    height: 128px;
   }
 `;
 
