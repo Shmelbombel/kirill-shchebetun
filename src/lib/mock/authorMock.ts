@@ -7,7 +7,7 @@ export const authorMock = {
   },
   whatsapp: {
     title: "WHATSAPP",
-    href: `https://api.whatsapp.com/send?phone=89958505481&text=Здравствуйте!`,
+    href: `https://api.whatsapp.com/send?phone=89525186276&text=Здравствуйте!`,
     color: "#25D366",
   },
   telegram: {
