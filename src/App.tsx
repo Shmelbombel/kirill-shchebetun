@@ -5,7 +5,6 @@ import MainLayout from "layout/MainLayout";
 import { globalStyles, theme } from "./theme/theme";
 import Home from "./component/Home/Home";
 import About from "./component/About/About";
-import Map from "./component/Map/Map";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Home />
         <About />
         <Contacts />
-        <Map />
       </MainLayout>
       <GlobalStyles styles={globalStyles as any} />
     </ThemeProvider>
