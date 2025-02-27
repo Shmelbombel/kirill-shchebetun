@@ -12,10 +12,6 @@ const FooterInfo = () => {
       <ParagraphSC>
         <AddressSC>
           <span>Город:</span> {authorMock.address.city}
-          {"\n"}
-          <span>Улица:</span> {authorMock.address.street}
-          {"\n"}
-          <span>Офис:</span> {authorMock.address.officeNumber}
         </AddressSC>
       </ParagraphSC>
     </div>
