@@ -5,7 +5,6 @@ import { websiteNavArr, websiteNavObj } from "lib/mock/websiteNav";
 import { styled } from "@mui/material";
 import ContactsForm from "./ContactsForm/ContactsForm";
 import { ContainerSC } from "UI/StyledComponents/ContainerSC";
-import AnchorUI from "UI/AnchorUI/AnchorUI";
 
 const Contacts = () => {
   return (
@@ -15,7 +14,6 @@ const Contacts = () => {
         <WrapperSC>
           <ContactsForm />
         </WrapperSC>
-        <AnchorUI href={websiteNavArr[2].href} />
       </SectionSC>
     </ContainerSC>
   );
