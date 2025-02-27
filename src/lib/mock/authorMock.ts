@@ -2,8 +2,8 @@ export const authorMock = {
   FIO: "Щебетун Кирилл Викторович",
   email: "kirill365@mail.ru",
   phone: {
-    normal: "89958505481",
-    format: "+7 (995) 850-54-81",
+    normal: "89525186276",
+    format: "+7 (952) 518-62-76",
   },
   whatsapp: {
     title: "WHATSAPP",
